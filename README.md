@@ -5,7 +5,7 @@
 ---
 ### **🚀 Live Demo**
 
-### Live URL:
+### Live URL: https://astron-qr-shubham.vercel.app
 
 ---
 
@@ -61,7 +61,7 @@ npm install
 Create a `.env` file in the root directory:
 ```bash
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/<databasename>?retryWrites=true&w=majority
-NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL=http://localhost:3000 //live_vercel_links
 NEXTAUTH_SECRET=your_generated_secret_here
 
 AWS_ACCESS_KEY_ID=your_aws_access_key
