@@ -176,7 +176,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="mt-16 py-8 border-t bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-          <p>© 2024 Astron Financials. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Astron Financials. All rights reserved.</p>
         </div>
       </footer>
     </div>
