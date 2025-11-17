@@ -27,7 +27,7 @@ const UserSchema = new Schema<IUser>(
         },
         isAdmin: {
             type: Boolean,
-            default: false,
+            default: true,
         },
     },
     {

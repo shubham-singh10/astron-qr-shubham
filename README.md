@@ -131,7 +131,7 @@ astron-qr-shubham/
 ```
 ___
 ### 🔑 Login Credentials(Default):
-- Email: admin@local.test
+- Email: admin1@local.test
 - password: admin123
 ___
 
