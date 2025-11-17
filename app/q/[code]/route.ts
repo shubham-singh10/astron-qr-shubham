@@ -5,10 +5,10 @@ import Link from '@/lib/models/Link';
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { code: string } }
+  context: { params: Promise<{ code: string }> }
 ) {
   try {
-    const { code } = await params;
+    const { code } = await context.params;
     await connectDB();
 
     const link = await Link.findOne({ shortCode: code });
@@ -48,7 +48,7 @@ export async function GET(
             <div class="container">
               <h1>404</h1>
               <p>QR Code Not Found</p>
-              <p style="font-size: 1rem; opacity: 0.8;">Code: ${params.code}</p>
+              <p style="font-size: 1rem; opacity: 0.8;">Code: ${code}</p>
             </div>
           </body>
         </html>`,

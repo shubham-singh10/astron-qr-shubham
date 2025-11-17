@@ -6,10 +6,10 @@ import Link from '@/lib/models/Link';
 
 export async function GET(
     req: NextRequest,
-    { params }: { params: { code: string } }
+    context: { params: Promise<{ code: string }> }
 ) {
     try {
-        const { code } = await params
+        const { code } = await context.params
         const session = await getServerSession(authOptions);
 
         if (!session?.user?.email) {
@@ -35,10 +35,10 @@ export async function GET(
 
 export async function PATCH(
     req: NextRequest,
-    { params }: { params: { code: string } }
+    context: { params: Promise<{ code: string }> }
 ) {
     try {
-        const { code } = await params
+        const { code } = await context.params
         const session = await getServerSession(authOptions);
 
         if (!session?.user?.email) {
