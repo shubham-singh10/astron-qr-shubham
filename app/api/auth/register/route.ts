@@ -36,10 +36,6 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // Check if email is in admin list
-        const adminEmails = process.env.ADMIN_EMAILS?.split(',').map(e => e.trim().toLowerCase()) || [];
-        const isAdmin = adminEmails.includes(email.toLowerCase());
-
         // Hash password
         const hashedPassword = await hash(password, 12);
 
@@ -48,7 +44,6 @@ export async function POST(req: NextRequest) {
             email: email.toLowerCase(),
             password: hashedPassword,
             name,
-            isAdmin,
         });
 
         return NextResponse.json({
